@@ -1,9 +1,7 @@
-# First Commit
-# This is a tomorrowland websracper used to show the artists, stages and hosts
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
-my_url = 'https://www.tomorrowland.com/en/festival/line-up/stages/friday-19-july-2019'
+my_url = 'https://www.tomorrowland.com/en/festival/line-up/'
 
 # opening connection, grabbing the page
 uClient = uReq(my_url)
