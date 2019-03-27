@@ -35,9 +35,10 @@ eventdays = page_soup.findAll("div", {"class":"eventdays"})
 #headers ="brand, product_name, shipping\n"
 
 #f.write(headers)
-
+artist_count = 0
 i = 0
 for container in containers:
+    n = 0
     stage_title = containers[i].find("div","stage__title").h5.text
     print("Stage Title: "+ stage_title)
 
@@ -45,8 +46,9 @@ for container in containers:
     print("Stage Location: "+ stage_location)
 
     for artist in containers[i].findAll("li"):
-        print("Artist Number: %d " %i)
-	
+        print(containers[i].findAll("li")[n].text.strip())
+        n += 1
+        artist_count += 1
 
 
 	#f.write(brand + "," + product_name.replace(",", "|") + "," + shipping + "\n")
@@ -55,5 +57,6 @@ for container in containers:
 	#brand = div_info.div.a.img["title"]
 #f.close()
 
+print("Artist count: ", artist_count)
 #for eventday in eventdays:
 	#date = 
