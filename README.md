@@ -19,3 +19,10 @@ At the moment there is only console output.
 
 - CSV Export
 - Overview between the weekends
+
+### Required
+
+- Tested with Python v3.7.1  
+<https://www.python.org/downloads/release/python-371/>
+- BeautifulSoup 4  
+<https://www.crummy.com/software/BeautifulSoup/#Download>
