@@ -5,16 +5,26 @@
             "day": 1,
             "stages": [
                 {
-                    "stage": "mainstage",
+                    "stage-host": "Mainstage",
+                    "stage-location": "Mainstage",
                     "artists": [
                         {
-                            "artist": "martin garrix"
+                            "artist": "Martin Garrix"
                         },
                         {
-                            "artist": "afrojack"
+                            "artist": "Afrojack"
                         }
                     ]
-                }
+                },
+                {
+                    "stage-host": "Q-Dance",
+                    "stage-location": "Atmosphere",
+                    "artists": [
+                        {
+                            "artist": "Headhunterz"
+                        }
+                    ]
+                }    
             ]
         }
     ]
