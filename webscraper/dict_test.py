@@ -1,6 +1,7 @@
 ### Standardized Dictionary for JSON Parsing
 ### Parameters:
 
+### Structure for calling the method
 metadata = {
     "Festivalname": "Tomorrowland",
     "Location": "Belgium, Boom",
@@ -19,7 +20,7 @@ def create_dict(metadata, weekends):
         dict["Festival"] = metadata.get("Festivalname")
         dict["Location"] = metadata.get("Location")
         dict["Year"] = metadata.get("Year")
-        
+
     else:
         raise KeyError
 
