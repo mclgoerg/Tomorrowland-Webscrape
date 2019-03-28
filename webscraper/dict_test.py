@@ -1,20 +1,29 @@
 ### Standardized Dictionary for JSON Parsing
 ### Parameters:
 
-festivalname = "Tomorrowland"
-location = "Belgium"
-year = 2019
+metadata = {
+    "Festivalname": "Tomorrowland",
+    "Location": "Belgium, Boom",
+    "Year": "2019"
+}
+
 weekends = ["Weekend 1", " Weekend 2"]
 dict = {}
 
-def create_dict(name, location, year, weekends):
-    
-    dict["Festival"] = name
-    dict["Location"] = location
-    dict["Year"] = year
-    keys = weekends
-    print(keys)
 
+def create_dict(metadata, weekends):
+    if(metadata.get("Festivalname") != None and
+       metadata.get("Location") != None and
+       metadata.get("Year") != None):
+
+        dict["Festival"] = metadata.get("Festivalname")
+        dict["Location"] = metadata.get("Location")
+        dict["Year"] = metadata.get("Year")
+        
+    else:
+        raise KeyError
+
+    keys = weekends
 
     for key in keys:
         dict[key] = {}
@@ -22,9 +31,7 @@ def create_dict(name, location, year, weekends):
     #dict[key] = {}
     #dict["Weekends"] = {}
 
-    
-    
 
-create_dict(festivalname, location, year, weekends)
+create_dict(metadata, weekends)
 
 print(dict)
