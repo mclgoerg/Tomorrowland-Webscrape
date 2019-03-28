@@ -1,0 +1,21 @@
+{
+    "weekend": 1,
+    "days": [
+        {
+            "day": 1,
+            "stages": [
+                {
+                    "stage": "mainstage",
+                    "artists": [
+                        {
+                            "artist": "martin garrix"
+                        },
+                        {
+                            "artist": "afrojack"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
