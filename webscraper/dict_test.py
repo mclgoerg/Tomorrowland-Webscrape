@@ -1,6 +1,6 @@
-### Standardized Dictionary for JSON Parsing
+### Standardized dictionaryionary for JSON Parsing
 ### Parameters:
-
+import json # das ist json
 ### Structure for calling the method
 metadata = {
     "Festivalname": "Tomorrowland",
@@ -9,30 +9,42 @@ metadata = {
 }
 
 weekends = ["Weekend 1", " Weekend 2"]
-dict = {}
+days = ["Day 1", "Day 2", "Day 3"]
+artists = ["Dr. Peackock", "Sefa", "Headhunterz"]
+stages = ["Mainstage", "Atmosphere"]
+dictionary = {}
 
 
-def create_dict(metadata, weekends):
+def create_dictionary():
     if(metadata.get("Festivalname") != None and
        metadata.get("Location") != None and
        metadata.get("Year") != None):
 
-        dict["Festival"] = metadata.get("Festivalname")
-        dict["Location"] = metadata.get("Location")
-        dict["Year"] = metadata.get("Year")
+        dictionary["Festival"] = metadata.get("Festivalname")
+        dictionary["Location"] = metadata.get("Location")
+        dictionary["Year"] = metadata.get("Year")
 
     else:
         raise KeyError
+        
 
-    keys = weekends
+    for weekend in weekends:
+        dictionary[weekend] = {}
+        for day in days:
+            dictionary[weekend][day] = {}
+            for stage in stages:
+                dictionary[weekend][day][stage] = {}
+                for artist in artists:
+                    dictionary[weekend][day][stage] = artist
 
-    for key in keys:
-        dict[key] = {}
+    #dictionary[key] = {}
+    #dictionary["Weekends"] = {}
 
-    #dict[key] = {}
-    #dict["Weekends"] = {}
+#json = json.dumps(dictionary)
+# 
+create_dictionary()
 
+#print(dictionary)
+#print(json)
 
-create_dict(metadata, weekends)
-
-print(dict)
+print(json.dumps(dictionary))
